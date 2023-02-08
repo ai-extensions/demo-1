@@ -1,0 +1,19 @@
+name: 3D2_unsupervised_classification_using_Sentinel-2
+
+conda_env: environment.yml
+
+entry_points:
+  main:
+    parameters:
+      n_estimators: {type: int, default: 10}
+      max_depth: {type: int, default: 5}
+      random_state: {type: int, default: 0}
+      training_water: {type: path}
+      training_artificial: {type: path}
+      training_low_vegetation: {type: path}
+      training_tree_cover: {type: path}
+      validation: {type: path}
+      img_folder: {type: path}
+
+    command: "python train.py {n_estimators} {max_depth} {random_state} {training_water} {training_artificial} {training_low_vegetation} {training_tree_cover}  {validation} {img_folder}"
+

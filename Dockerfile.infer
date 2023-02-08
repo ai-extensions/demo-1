@@ -1,0 +1,5 @@
+FROM docker.io/library/python:3.8.16-bullseye
+
+ADD mlruns/0/1c85db0d2c3243f195af57540a32949c/artifacts/model/requirements.txt /tmp/requirements.txt
+
+RUN pip install -r /tmp/requirements.txt

@@ -1,0 +1,11 @@
+name: machine-learning
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9.7
+  - scikit-image
+  - scikit-learn
+  - cwltool
+  - pip
+  - pip:
+      - mlflow
