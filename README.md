@@ -21,6 +21,9 @@ Using a Common Workflow Language runner:
 ```
 cwltool --no-container \
     train.cwl \
+    --environment environment.yml \
+    --train train.py \
+    --ml_project MLproject \
     --max_depth 10 \
     --n_estimators 5 \
     --random_state 0 \

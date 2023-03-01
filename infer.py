@@ -23,4 +23,4 @@ classified_data = loaded_model.predict(pd.DataFrame(data))
 
 classified = classified_data.reshape(coll[1].shape)
 
-io.imsave('classified.tif', classified.astype(np.uint8))
+io.imsave("classified.tif", classified.astype(np.uint8))

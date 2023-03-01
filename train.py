@@ -33,9 +33,9 @@ def eval_metrics(actual, pred):
 if __name__ == "__main__":
 
     # model
-    n_estimators = int(sys.argv[1]) 
-    max_depth = int(sys.argv[2]) 
-    random_state = int(sys.argv[3]) 
+    n_estimators = int(sys.argv[1])
+    max_depth = int(sys.argv[2])
+    random_state = int(sys.argv[3])
 
     # read the labels and validation datasets
     training_water = sys.argv[4]
@@ -68,8 +68,6 @@ if __name__ == "__main__":
             4 * np.ones((X_trees.shape[0], 1)),
         )
     )
-
-    
 
     with mlflow.start_run(description="Random Forest classifier"):
         mlflow.log_param("n_estimators", n_estimators)
