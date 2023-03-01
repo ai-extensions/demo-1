@@ -37,10 +37,16 @@ cwltool --no-container \
 
 ## Inference
 
+
 ```
 cwltool --no-container \
     infer.cwl \
+    --infer infer.py \
     --model_directory mlruns/0/ \
-    --model_id 847af2d92e0744baac9035f674e028d0 \
-    --s2_data ./S2_data/
+    --model_id 593f7ddb798e49d0818e394d0b214b70 \
+    --s2_data $PWD/S2_data/
+```
+
+```
+docker build --build-arg model_id=593f7ddb798e49d0818e394d0b214b70 -f Dockerfile.infer .
 ```

@@ -1,5 +1,5 @@
 FROM docker.io/library/python:3.8.16-bullseye
-
-ADD mlruns/0/1c85db0d2c3243f195af57540a32949c/artifacts/model/requirements.txt /tmp/requirements.txt
+ARG model_id=593f7ddb798e49d0818e394d0b214b70
+ADD mlruns/0/$model_id/artifacts/model/requirements.txt /tmp/requirements.txt
 
 RUN pip install -r /tmp/requirements.txt

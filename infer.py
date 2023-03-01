@@ -1,3 +1,5 @@
+
+import os
 import mlflow
 import sys
 import pandas as pd
@@ -6,7 +8,7 @@ import numpy as np
 
 logged_model = sys.argv[1]
 img_folder = sys.argv[2]
-coll = io.ImageCollection(img_folder + "*.tif")
+coll = io.ImageCollection(os.path.join(img_folder, "*.tif"))
 
 bands = []
 for i in range(len(coll)):
@@ -23,4 +25,4 @@ classified_data = loaded_model.predict(pd.DataFrame(data))
 
 classified = classified_data.reshape(coll[1].shape)
 
-io.imsave("classified.tif", classified.astype(np.uint8))
+io.imsave('classified.tif', classified.astype(np.uint8))
