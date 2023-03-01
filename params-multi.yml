@@ -1,0 +1,37 @@
+environment:
+  class: File
+  path: environment.yml
+train:
+  class: File
+  path: train.py
+ml_project:
+  class: File
+  path: MLproject
+max_depth:
+- 10
+- 9
+- 8
+n_estimators:
+- 4
+- 5 
+random_state:
+- 0
+- 1
+s2_data:
+  class: Directory
+  path: ./S2_data 
+train_artificial_surfaces:
+  class: File
+  path:  ./training_data/artificial_surfaces.txt
+train_low_vegetation:
+  class: File
+  path:  ./training_data/low_vegetation.txt
+train_tree_cover:
+  class: File
+  path:  ./training_data/tree_cover.txt
+train_water:
+  class: File
+  path:  ./training_data/water.txt
+validation:
+  class: File
+  path: ./validation_data/validation_points.txt
