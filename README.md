@@ -1,6 +1,8 @@
 
 # Demo-1 Sentinel-2 Random Forest Classifier
 
+Use the Visual Studio development container to run these examples
+
 ## Training 
 
 Using MLFlow:
@@ -37,6 +39,9 @@ cwltool --no-container \
 
 ## Inference
 
+The inference takes the Sentinel-2 acquistion to classify with the provided model.
+
+CWL can be used to do so with:
 
 ```
 cwltool --no-container \
@@ -46,6 +51,8 @@ cwltool --no-container \
     --model_id 593f7ddb798e49d0818e394d0b214b70 \
     --s2_data $PWD/S2_data/
 ```
+
+Build the inference docker container with the selected model id:
 
 ```
 docker build --build-arg model_id=593f7ddb798e49d0818e394d0b214b70 -f Dockerfile.infer .
