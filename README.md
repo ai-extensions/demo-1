@@ -4,6 +4,8 @@
 
 This demo is based on the exercise [WEkEO ai4EM MOOC - Supervised classification using Sentinel-2 data](https://github.com/wekeo/ai4EM_MOOC/blob/main/3_land/3D2_land_cover_classification_with_Sentinel-2_data/3D2_supervised_classification_using_Sentinel-2.ipynb)
 
+This demo is a starting point for the project activities and introduces the potential of the Common Worflow Language for training and infer activities and MLflow.
+
 Use the Visual Studio development container to run this demo.
 
 ## Training 
