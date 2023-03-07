@@ -53,8 +53,8 @@ cwltool --no-container \
     infer.cwl \
     --infer infer.py \
     --model_directory mlruns/0/ \
-    --model_id 593f7ddb798e49d0818e394d0b214b70 \
-    --s2_data $PWD/S2_data/
+    --s2_data $PWD/S2_data/ \
+    --model_id 593f7ddb798e49d0818e394d0b214b70 
 ```
 
 Build the inference docker container with the selected model id:
